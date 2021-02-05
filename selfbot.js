@@ -53,7 +53,7 @@ client.on("message", function(message) {
     }
 });
 
-// chat spam 
+// chat spam, this command doesn't stop. If you want to stop it restart the selfbot 
 client.on("message", function (message) {	
 	if (message.content == `${prefix}spam`) {	
 		message.delete()
