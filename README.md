@@ -9,7 +9,7 @@
 
 ## How to get started
 
-- download <a href=https://node.js.org>node.js 
+- download https://node.js.org/
   
 - download the selfbot as zip
 
