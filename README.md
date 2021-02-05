@@ -3,9 +3,6 @@
 - Powered by https://locus.solutions
 - We are still developing this selfbot, please report bugs to rayz#4986 or synesta#5526
 - Using a selfbot is BANNABLE by discord TOS, if you do not want to get banned, do not use this.
-  
-## The selfbot was made entirely by synesta#5526 and rayz#4986
-
 
 ## How to get started
 
@@ -26,3 +23,7 @@
 - to get userID, go to settings and follow this (https://locus.is-a-cu.lt/2f636ac.png) 
 - then right click on your profile and click copy id (https://locus.is-a-cu.lt/0ddfb10.png)
 
+## Contributors 
+- synesta 
+- rayz
+- 6eamed
