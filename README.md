@@ -19,7 +19,7 @@
 
 - write 'npm i', this will install all node packages 
 
-- go to config.json and add your token, prefix and your footer.
+- go to config.json and add your token and prefix
 
 - most commands will be locked to userID, scroll through selfbot.js for userID checks and replace them with your ID.
 
