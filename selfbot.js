@@ -7,7 +7,7 @@ const log = console.log;
 process.title = "selfbot terminal | https://locus.solutions";
 
 
-const { owner, prefix, token, sbversion, footer, advert, response } = config;
+const { prefix, token, sbversion, footer, response } = config;
 const Constants = require("discord.js/src/util/Constants.js");
 const EventEmitter = require("events");
 Constants.DefaultOptions.ws.properties.$browser = `Discord iOS`;
