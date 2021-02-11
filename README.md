@@ -20,8 +20,8 @@
 
 - most commands will be locked to userID, scroll through selfbot.js for userID checks and replace them with your ID.
 
-- to get userID, go to settings and follow this (https://locus.is-a-cu.lt/2f636ac.png) 
-- then right click on your profile and click copy id (https://locus.is-a-cu.lt/0ddfb10.png)
+- to get userID, go to settings and follow this (https://streamable.com/a2j7i5) 
+- then right click on your profile and click copy id 
 
 ## Contributors 
 - synesta 
