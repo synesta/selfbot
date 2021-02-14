@@ -79,7 +79,7 @@ client.on('message', async(msg)=>{
 
         var interval = setInterval(function () {
             msg.channel.send("spam");
-        }, 1);
+        }, 1); // edit the value '1' to change the interval of time sent between messages (this is in milliseconds, for conversions refer to > 1 second = 1000 milliseconds
     }
     
     // purges messages at intervals of 100
