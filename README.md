@@ -18,6 +18,10 @@
 
 - go to config.json and add your token, prefix and your userID
 
+## PREVIEW
+
+- Want to see the selfbot in action? check here - https://youtu.be/CmN7La0gAnw
+
 ## CONTRIBUTORS
 - synesta 
 - rayz
