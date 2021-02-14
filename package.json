@@ -10,7 +10,7 @@
     "type": "",
     "url": ""
   },
-  "author": "rayz#4986",
+  "author": "rayz#4986, synesta#5526",
   "license": "ISC",
   "dependencies": {
     "chalk": "^3.0.0",
