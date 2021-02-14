@@ -116,16 +116,20 @@ client.on('message', async(msg)=>{
         	 **All commands require a prefix, the selfbot prefix is "${prefix}"**
              **To display this command, write ${prefix}help**
 
-			**# FUN**
-			// lenny - sends lenny face
-			// party - sends party face
+            **# FUN**
+            // lenny - sends lenny face
+            // party - sends party face
             // wink - sends a winking face
             // smiley - sends a smiley face
-			// flip - flips the dinner table
-			// unflip - you gently put the table back in place
+            // flip - flips the dinner table
+            // unflip - you gently put the table back in place
+            // yay - sends a yay face
+            // woah - sends a woah face
+            // cat - sends a random image of a cat
+            // dog - sends a random image of a dog
             // avatar - sends user avatar
             // say - says something in an embed
-            // nuke - nukes a channel, that's always fun
+	    // nuke - nukes a channel, that's always fun
             // eval - calculator
 
             **# CLIENT**
