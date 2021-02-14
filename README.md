@@ -4,7 +4,7 @@
 - We are still developing this selfbot, please report bugs to rayz#4986 or synesta#5526
 - Using a selfbot is BANNABLE by discord TOS, if you do not want to get banned, do not use this.
 
-## How to get started
+## HOW TO GET STARTED
 
 - download https://node.js.org/
   
@@ -16,14 +16,8 @@
 
 - write 'npm i', this will install all node packages 
 
-- go to config.json and add your token and prefix
+- go to config.json and add your token, prefix and your userID
 
-- most commands will be locked to userID, scroll through selfbot.js for userID checks and replace them with your ID.
-
-- to get userID, go to settings and follow this (https://streamable.com/a2j7i5) 
-- then right click on your profile and click copy id 
-
-## Contributors 
+## CONTRIBUTORS
 - synesta 
 - rayz
-- 6eamed

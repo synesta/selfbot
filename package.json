@@ -1,16 +1,20 @@
 {
-	"name": "locus_selfbot",
-	"version": "1.0.0",
-	"description": "",
-	"main": "selfbot.js",
-	"dependencies": {
-		"chalk": "^4.1.0",
-		"discord.js": "^11.6.4",
-		"fs": "^0.0.1-security"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"author": "",
-	"license": "ISC"
+  "name": "locus-selfbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "locus.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "author": "rayz#4986",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "discord.js": "^11.6.4",
+    "nekos.life": "^2.0.7"
+  }
 }
