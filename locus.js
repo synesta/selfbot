@@ -71,8 +71,6 @@ client.on('message', async(msg)=>{
         msg.edit("【 º □ º 】")
     }
 
-
-
     // spam command
     if(cmd === 'spam'){
         msg.edit("spam")
@@ -217,5 +215,51 @@ client.on('message', async(msg)=>{
             .setFooter(footer) })
     }
 });
+
+var config = require("./config.json");
+const { clientId } = config;
+
+const { Client } = require("discord-rpc");
+
+var startTimestamp = new Date();
+
+async function reconnect() {
+    try {
+        await login();
+    } catch (error) {
+        console.error("discord not open:", error);
+        setTimeout(async () => {
+            await reconnect();
+        }, 1000 * 10);
+    }
+}
+
+reconnect();
+
+async function login() {
+
+    rpc = new Client({
+        transport: "ipc",
+    });
+
+    rpc.on("ready", () => {
+	    
+        rpc.setActivity({
+            details: `locus.solutions`,
+            state: `with locus projects`,
+            startTimestamp,
+            largeImageKey: "logo",
+            largeImageText: "locus.solutions",
+            instance: false,
+        });
+    });
+
+    rpc.on("disconnected", async () => {
+        console.log("disconnected");
+        await reconnect();
+    });
+
+    return rpc.login({ clientId: clientId });
+}
 
 client.login(token); // logs into token from ./config.json
