@@ -5,11 +5,11 @@ const client = new Discord.Client();
 const { prefix, token, ID, sbversion } = require('./config.json'); // allows you to use things like ${prefix} - do NOT change the config.json file
 const nekoclient = require('nekos.life'); // nekos.life API used for cat/dog commands
 const neko = new nekoclient();
-const footer = 'Powered by https://locus.solutions/' // variable for the footer in embeds
+const footer = 'powered by https://locus.solutions/' // variable for the footer in embeds
 process.title = "selfbot terminal | https://locus.solutions"; // changes name of the terminal   
 
 // Logs
-console.log(greenBright(`[NOTICE] : we are still developing this selfbot, please report bugs to rayz#4986 or synesta#5526`));
+console.log('============================================================================');
 console.log(greenBright(`[NOTICE] : using a selfbot is BANNABLE by discord TOS, if you do not want to get banned, do not use this.`));
 console.log(greenBright(`[CLIENT] : you are on version ${sbversion} of our selfbot`))
 console.log('============================================================================');
@@ -31,17 +31,21 @@ client.on('message', async(msg)=>{
     if(msg.content.startsWith(prefix) && msg.author.id === ID){
         console.log(cyan(`[CLIENT] : ${client.user.tag} ran '${msg.content}'`));
     }
+
     // ping command, this will display client ping
-    if(cmd === `ping`){
-        msg.edit(`Client ping is ${client.ping.toFixed()}ms`);
+    if(cmd === "ping"){
+        msg.delete()
+        msg.channel.send("", { embed: new RichEmbed()
+         .setColor("RANDOM")
+         .setDescription(`**Client ping is ${client.ping.toFixed()}ms**`)
+    })
     }
-
-
 
     // smiley command, this will edit your message to a smiley
     if(cmd === 'smiley'){
-        msg.edit("☻");
+        msg.edit("☻");s
     }
+
     // wink command, this will edit your message to a wink
     if(cmd === 'wink'){
         msg.edit("( ͡~ ͜ʖ ͡°)")
@@ -77,7 +81,7 @@ client.on('message', async(msg)=>{
 
         var interval = setInterval(function () {
             msg.channel.send("spam");
-        }, 1); // edit the value '1' to change the interval of time sent between messages (this is in milliseconds, for conversions refer to > 1 second = 1000 milliseconds
+        }, 1);
     }
     
     // purges messages at intervals of 100
@@ -91,7 +95,11 @@ client.on('message', async(msg)=>{
         let hours = Math.floor(client.uptime / 3600000) % 24;
         let minutes = Math.floor(client.uptime / 60000) % 60;
         let seconds = Math.floor(client.uptime / 1000) % 60;
-        msg.edit(`I've been online for ${days}d ${hours}h ${minutes}m ${seconds}s`)
+        msg.delete()
+        msg.channel.send("", { embed: new RichEmbed()
+            .setColor("RANDOM")
+            .setDescription(`**I've been online for ${days}d ${hours}h ${minutes}m ${seconds}s**`)
+       })
     }
     
     // displays author or users avatar
@@ -111,29 +119,26 @@ client.on('message', async(msg)=>{
         msg.channel.send("", { embed: new RichEmbed()
         .setColor("RANDOM")
         .setDescription(`
-        	 **All commands require a prefix, the selfbot prefix is "${prefix}"**
+             **All commands require a prefix, the selfbot prefix is "${prefix}"**
              **To display this command, write ${prefix}help**
 
-            **# FUN**
-            // lenny - sends lenny face
-            // party - sends party face
+		**# FUN**
+	    // lenny - sends lenny face
+	    // party - sends party face
             // wink - sends a winking face
             // smiley - sends a smiley face
-            // flip - flips the dinner table
-            // unflip - you gently put the table back in place
-            // yay - sends a yay face
-            // woah - sends a woah face
-            // cat - sends a random image of a cat
-            // dog - sends a random image of a dog
+	    // flip - flips the dinner table
+	    // unflip - you gently put the table back in place
             // avatar - sends user avatar
             // say - says something in an embed
-	    // nuke - nukes a channel, that's always fun
+            // nuke - nukes a channel, that's always fun
             // eval - calculator
 
             **# CLIENT**
             // logout - logs out of the client (you will have to restart)
             // uptime - sends the time the selfbot has been online
             // ping - sends the client ping 
+
             `)})
     } 
       
@@ -148,6 +153,7 @@ client.on('message', async(msg)=>{
             .setFooter(footer)});
     }
     
+    // nukes a channel so long as permissions are set
     if(cmd === "nuke") {
         let clearchannel = msg.channel
         newChannel = await clearchannel.clone()
@@ -180,22 +186,8 @@ client.on('message', async(msg)=>{
         }
         dog();
     }
-    
-    /*
-    if(cmd === "scare"){
-        msg.delete()
-        msg.channel.send("", { embed: new RichEmbed()
-        .setColor("RANDOM")
-        .setImage("need to find an actual image :)")})
-    } 
-    */
 
-    // exits selfbot process
-    if(cmd === "logout"){
-        process.exit()
-    }
-
-    // BASIC CALCULATOR
+    // basic calculator
     if(cmd === 'eval'){
         let res;
         try{
@@ -203,7 +195,7 @@ client.on('message', async(msg)=>{
         } catch(e){
             return msg.edit("", { embed: new RichEmbed()
                 .setColor("RANDOM")
-                .setDescription(`Uh oh, there was an error.`)
+                .setDescription(`You have to enter a number`)
                 .setTimestamp()
                 .setFooter(footer) })
         }
@@ -213,6 +205,23 @@ client.on('message', async(msg)=>{
             **Answer : ${res}**`)
             .setTimestamp()
             .setFooter(footer) })
+    }
+
+    // displays selfbot version
+    if(cmd === 'version'){
+        msg.delete()
+        msg.channel.send(`You are running selfbot version ${sbversion}`)
+    }
+
+    // displays selfbot prefix
+    if(cmd === 'prefix'){
+        msg.delete()
+        msg.channel.send(`Your set prefix is **${prefix}**`)
+    }
+        
+    // exits selfbot process
+    if(cmd == "logout"){
+        process.exit()
     }
 });
 
