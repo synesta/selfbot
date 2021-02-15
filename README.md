@@ -7,15 +7,10 @@
 ## HOW TO GET STARTED
 
 - download https://node.js.org/
-  
 - download the selfbot as zip
-
 - extract the files to your desktop
-
 - when you are there open terminal in your IDE or just open it from searchbar in the bot's folder (ex. https://streamable.com/b4hl0y)
-
 - write 'npm i', this will install all node packages 
-
 - go to config.json and add your token, prefix and your userID
 
 ## RPC SETUP
@@ -30,3 +25,6 @@
 ## CONTRIBUTORS
 - synesta 
 - rayz
+
+## FOR MORE HELP
+- Join our discord https://discord.gg/Tz9WBRYBGZ
