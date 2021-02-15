@@ -10,6 +10,7 @@ process.title = "selfbot terminal | https://locus.solutions"; // changes name of
 
 // Logs
 console.log('============================================================================');
+console.log(greenBright(`[NOTICE] : this selfbot is updated and maintained by synesta#5526 and rayz#4986`));
 console.log(greenBright(`[NOTICE] : using a selfbot is BANNABLE by discord TOS, if you do not want to get banned, do not use this.`));
 console.log(greenBright(`[CLIENT] : you are on version ${sbversion} of our selfbot`))
 console.log('============================================================================');
@@ -81,7 +82,7 @@ client.on('message', async(msg)=>{
 
         var interval = setInterval(function () {
             msg.channel.send("spam");
-        }, 1);
+        }, 1); // edit the value '1' to change the interval of time sent between messages (this is in milliseconds, for conversions refer to > 1 second = 1000 milliseconds
     }
     
     // purges messages at intervals of 100
