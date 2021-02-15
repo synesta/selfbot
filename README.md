@@ -18,6 +18,11 @@
 
 - go to config.json and add your token, prefix and your userID
 
+## RPC SETUP
+- https://discord.com/developers/applications create an application
+- copy client ID and paste it into the correct spot in config.json
+- customize details within the RPC code to your liking
+
 ## PREVIEW
 
 - Want to see the selfbot in action? check here - https://youtu.be/CmN7La0gAnw
