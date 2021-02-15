@@ -226,6 +226,8 @@ client.on('message', async(msg)=>{
     }
 });
 
+/* only use this if you know what you're doing with RPC, or check the readme 
+
 var config = require("./config.json");
 const { clientId } = config;
 
@@ -271,5 +273,6 @@ async function login() {
 
     return rpc.login({ clientId: clientId });
 }
+*/
 
 client.login(token); // logs into token from ./config.json
