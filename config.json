@@ -2,5 +2,6 @@
     "token": "",
     "prefix": "",
     "ID": "",
-    "sbversion": "1.0.0"
+    "sbversion": "1.0.0",
+    "clientId": "CLIENT_ID_HERE"
 }
