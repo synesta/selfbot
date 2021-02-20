@@ -26,6 +26,7 @@ client.on('message', async(msg)=>{
     if(msg.author.id !== ID) {
         return;
     }
+    if(!msg.content.startsWith(prefix)) return;
     let cmd = msg.content.split(" ")[0]
     cmd = cmd.slice(prefix.length);
     let args = msg.content.split(" ").slice(1);
